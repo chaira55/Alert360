@@ -44,9 +44,3 @@ Alert360/
 3. Realiza un **commit** (`git commit -m 'Agrega nueva funcionalidad'`)
 4. Sube tus cambios (`git push origin feature-nueva`)
 5. Abre un **Pull Request** 🚀
-
-## 📜 Licencia
-[Tipo de licencia del proyecto]
-
-## 📞 Contacto
-Para cualquier consulta, puedes escribir a [correo o enlace de contacto].
