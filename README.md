@@ -30,22 +30,6 @@ Alert360/
    ```sh
    git clone https://github.com/chaira55/Alert360.git
    ```
-2. Configura las dependencias:
-   ```sh
-   cd backend
-   mvn install
-   ```
-   ```sh
-   cd frontend
-   npm install
-   ```
-3. Ejecuta la aplicación:
-   ```sh
-   mvn spring-boot:run  # Para el backend
-   ```
-   ```sh
-   ng serve  # Para el frontend
-   ```
 
 ## 🚧 Estado del Proyecto
 - [X] Definición de la idea
