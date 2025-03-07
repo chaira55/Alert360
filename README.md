@@ -3,12 +3,18 @@
 ![Alert360 Logo](https://via.placeholder.com/150)
 
 ## 📌 Descripción
-**Alert360** es una aplicación diseñada para [breve descripción del propósito del proyecto]. Actualmente, estamos trabajando en el módulo de autenticación y el login.
+**Alert360** es una aplicación web para la gestión y reporte en tiempo real de incidentes de tránsito y problemas urbanos. Permite a los ciudadanos registrar incidentes con geolocalización, imágenes y descripciones, facilitando la gestión por parte de las autoridades y mejorando la seguridad vial.
+
+## 👥 Integrantes del Equipo
+- **Juan Pablo Galeano Restrepo** – Desarrollador Frontend y Backend
+- **David Gómez Jiménez** – Líder del Proyecto / Desarrollador Frontend
+- **Sharik Jimena Guzmán Arroyo** – QA / Desarrollador Backend
 
 ## 🚀 Tecnologías utilizadas
-- **Backend:** [Lenguaje y framework usado]
-- **Frontend:** [Framework o librerías usadas]
-- **Base de Datos:** [Tipo de base de datos]
+- **Backend:** Spring Boot
+- **Frontend:** Angular
+- **Base de Datos:** MySQL
+- **Herramientas:** GitHub, IntelliJ IDEA, Visual Studio Code, Jira
 
 ## 📂 Estructura del Proyecto
 ```
@@ -27,24 +33,24 @@ Alert360/
 2. Configura las dependencias:
    ```sh
    cd backend
-   [comando para instalar dependencias]
+   mvn install
    ```
    ```sh
    cd frontend
-   [comando para instalar dependencias]
+   npm install
    ```
 3. Ejecuta la aplicación:
    ```sh
-   [comando para iniciar el backend]
+   mvn spring-boot:run  # Para el backend
    ```
    ```sh
-   [comando para iniciar el frontend]
+   ng serve  # Para el frontend
    ```
 
 ## 🚧 Estado del Proyecto
 - [X] Definición de la idea
 - [X] Creación del repositorio
-- [ ] Implementación del login
+- [ ] Implementación del login (En desarrollo)
 - [ ] Conexión con la base de datos
 - [ ] Desarrollo de funcionalidades clave
 
