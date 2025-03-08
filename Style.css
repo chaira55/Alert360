@@ -22,7 +22,7 @@ body {
 /* Sección de la imagen */
 .left-section {
     flex: 1;
-    background: url('./Fondo.jpg') center/cover no-repeat;
+    background: url('./Assets/Fondo.jpg') center/cover no-repeat;
     position: relative; /* Permite posicionar el texto dentro */
     display: flex;
     justify-content: center;
