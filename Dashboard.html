@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="Style_dash.css">
+</head>
+<body>
+    
+    <div class="parent">
+
+        <div class="div1">
+            <h2 class="titulo">Reportes cercanos</h2>
+            <div class="sub-div">
+                <h2>Arbol caido</h2>
+                
+            </div>
+            <div class="sub-div">
+                <h2>Hueco en carretera</h2>
+            </div>
+            <div class="sub-div">
+                <h2>Cables caidos</h2>
+            </div>
+            <div class="sub-div">
+                <h2>Derrame de aceite</h2>
+            </div>
+        </div>
+        
+
+        <div class="div2">
+            <div class="sub-div2">
+               
+                <img src="./Assets/Mapa.png" alt="">
+                
+            </div>
+        </div>
+
+        <div class="div3">
+            <h2 class="titulo">Agregar nuevo reporte</h2>
+            <div class="sub-div3">
+               
+                <form class="formulario">
+                    <label for="titulo">Título:</label>
+                    <input type="text" id="titulo" name="titulo" placeholder="Ingrese el título" required>
+            
+                    <label for="ubicacion">Ubicación:</label>
+                    <input type="text" id="ubicacion" name="ubicacion" placeholder="Ingrese la ubicación" required>
+            
+                    <label for="estado">Estado:</label>
+                    <select id="estado" name="estado" required>
+                        <option value="" disabled selected>Seleccione un estado</option>
+                        <option value="activo">Activo</option>
+                        <option value="pendiente">Pendiente</option>
+                        <option value="cancelado">Cancelado</option>
+                    </select>
+            
+                    <label for="descripcion">Descripción:</label>
+                    <textarea id="descripcion" name="descripcion" rows="4" placeholder="Ingrese la descripción"></textarea>
+            
+                    <button type="submit">Guardar</button>
+                </form>
+                
+            </div>
+            
+        </div>
+
+
+        <div class="div4">
+            <h2 class="titulo">Tu cuenta</h2>
+            <div class="sub-div4">
+                <img src="./Assets/avatar.png" alt="">
+                <h2>Sharik jimena Guzman</h2>
+                
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>
