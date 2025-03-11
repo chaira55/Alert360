@@ -93,6 +93,18 @@ form {
     border-color: skyblue;
 }
 
+.Btn-login{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.Btn-registro{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
 .button input {
     width: 100%;
     height: 50px;
