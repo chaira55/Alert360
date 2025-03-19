@@ -16,18 +16,19 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
+
 // Formulario
 submit.addEventListener("click", function (event) {
   event.preventDefault();
 
-  const email = document.getElementById("email")
-  const password = document.getElementById("password")
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
 
   if (!email || !password) {
     Swal.fire({
       icon: "error",
       title: "Campos obligatorios",
-      text: "Por favor, completa los campos de Email y Contraseña.",
+      text: "Por favor, completa los campos",
     });
     return;
   }
