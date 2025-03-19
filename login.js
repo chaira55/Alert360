@@ -1,14 +1,13 @@
 // Importaciones de Firebase 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
-import {getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-auth.js";
-import {getFirestore,doc,setDoc} from "https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore.js";
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-auth.js";
 
 // Configuración de Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyBrfhLntEZgcotyqDv2WdmmjBZ5vy296E0",
   authDomain: "alert360-project.firebaseapp.com",
   projectId: "alert360-project",
-  storageBucket: "alert360-project.appspot.com", 
+  storageBucket: "alert360-project.appspot.com",
   messagingSenderId: "1054354710783",
   appId: "1:1054354710783:web:69b9585e147eaf52a12cca",
 };
@@ -16,28 +15,29 @@ const firebaseConfig = {
 //Inicializar Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-const db = getFirestore(app);
 
 // Formulario
-
 submit.addEventListener("click", function (event) {
   event.preventDefault();
 
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-  const submit = document.getElementById("submit");
+  const email = document.getElementById("email")
+  const password = document.getElementById("password")
+
+  if (!email || !password) {
+    Swal.fire({
+      icon: "error",
+      title: "Campos obligatorios",
+      text: "Por favor, completa los campos de Email y Contraseña.",
+    });
+    return;
+  }
 
   signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      const user = userCredential.user;
-
-        window.location.href = "dashboard.html"
-     
-      
+    .then(() => {
+      window.location.href = "dashboard.html"
     })
 
     .catch((error) => {
-      const errorcode = error.code;
       const errorMessage = error.message;
       Swal.fire({
         icon: "error",
