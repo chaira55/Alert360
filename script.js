@@ -19,12 +19,12 @@ const auth = getAuth(app);
 submit.addEventListener("click", function (event) {
   event.preventDefault();
 
-  let nombre = document.getElementById("nombre").value;
-  let email = document.getElementById("email").value;
-  let password = document.getElementById("password").value;
-  let fechaNacimiento = document.getElementById("fechaNacimiento").value;
+  const nombre = document.getElementById("nombre");
+  const email = document.getElementById("email");
+  const password = document.getElementById("password");
+  const fechaNacimiento = document.getElementById("fechaNacimiento");
 
-  if (!nombre || !fechaNacimiento) {
+  if (!nombre.value || !fechaNacimiento.value) {
     Swal.fire({
       icon: "error",
       title: "Campos obligatorios",
@@ -33,13 +33,17 @@ submit.addEventListener("click", function (event) {
     return;
   }
 
-  createUserWithEmailAndPassword(auth, email, password)
+  createUserWithEmailAndPassword(auth, email.value, password.value)
     .then(() => {
       Swal.fire({
         title: "Usuario Registrado con exito",
         icon: "success",
         draggable: true
       });
+      nombre.value = "";
+      email.value = "";
+      password.value = "";
+      fechaNacimiento.value = "";
     })
     .catch((error) => {
       const errorMessage = error.message;
@@ -48,6 +52,10 @@ submit.addEventListener("click", function (event) {
         title: "Hay un error...",
         text: errorMessage,
       });
+      nombre.value = "";
+      email.value = "";
+      password.value = "";
+      fechaNacimiento.value = "";
     });
 });
 
